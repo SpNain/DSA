@@ -1,0 +1,13 @@
+*.pdf
+*.png
+*.jpeg
+# .gitignore
+*.jpg
+*.mp4
+*.mov
+*.wmv
+WebPages
+*.txt
+Pep-Extra
+0.Lectures
+OOPS
