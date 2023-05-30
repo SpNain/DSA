@@ -1,4 +1,4 @@
-package com.company;
+// package com.company;
 
 import java.util.*;
 
@@ -10,10 +10,12 @@ public class Main{
         Scanner scn = new Scanner(System.in);
         int n= scn.nextInt();
         int [] arr= new int[n];
-        for(int i=0;i<n;i++){
-            arr[i]=scn.nextInt();
+        for (int i = 0; i < n; i++) {
+            arr[i] = scn.nextInt();
         }
         
+        int element = scn.nextInt();
+
         int ans=find(arr,element);
         System.out.println(ans);
     }
