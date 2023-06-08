@@ -4,32 +4,51 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        int n = 10;
+        int n = 5;
 
-        // // Edge cases
-        // if(n == 0 || n == 1 || n == 2){
-        //     System.out.println(0);
-        // }
-        // else if(n == 3){
-        //     System.out.println(1);
-        // }
-
-        int countPrimes = 0;
-        for (int num = 2; num < n; num++) {
-            boolean isPrime = true;
-
-            for (int j = 2; j * j <= num; j++) {
-
-                if (num % j == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
-            if (isPrime == true) // agr num prime h to countPrimes ko increase krdo
-                countPrimes++;
+        int[] arr = { 10, 19, 6, 5, 3 };
+        
+        
+        int[] res = new int[n];
+        
+        for(int i = 0; i<arr.length; i++){
+            res[i] = arr[i];
         }
         
-        System.out.println(countPrimes);
+        Arrays.sort(res);
+        
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        
+        for(int i = 0; i<res.length; i++){
+            hm.put(res[i], i);
+        }
+        
+        
+        int i = 0;
+        int val = arr[0];
+        int count = 0;
+        
+        while (i < n) {
+            
+            int pos = hm.get(val);
+            
+            if(i==pos){
+                i = (i+1)%n; // next element index
+                val = arr[i]; // value  for next iteration
+                continue; // taki value ghadbda na jaaye
+            }
+            
+            int temp = arr[pos];
+            arr[pos] = val;
+            arr[i] = temp;
+            
+            count++;
+            
+            val = temp;
+            
+        }
+        
+        System.out.println(count);
 
 
     }
