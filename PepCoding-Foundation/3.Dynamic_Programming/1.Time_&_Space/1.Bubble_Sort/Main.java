@@ -61,8 +61,8 @@ SP Nain Optimization -- Maine swapCount byaya aur dekha agr kisi bhi itrth itera
 count to sirf check karne ke liye bnaya tha ki actually me operations decrease ho rhe hai kya.
 
 Agr iss code ko nados pe run kroge to test cases fail honge kyunki swapping aur comparing jitni baar print hone chahiye the 
-wo loop bich me break hone ke karn print nhi honge
-isiliye swapCount ko comment krke hi code run krna aur submit krna nados pe.
+wo loop bich me break hone ke kaaran print nhi honge
+isiliye swapCount ko comment krke hi submit krna nados pe.
 */
 
 /*

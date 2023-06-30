@@ -15,6 +15,19 @@ public class Main {
             }
         }
     }
+
+    // without isGreater() & swap() fxn
+    for(int itr = 1; itr <= n-1 ; itr++){  // [#1]
+        for(int j = itr ; j > 0 ; j--){
+            if(arr[j]>arr[j-1]){
+                int temp = arr[j];
+                arr[j] = arr[j-1];
+                arr[j-1] = temp;
+            }else{
+                break;
+            }
+        }
+    }
   }
 
   // used for swapping ith and jth elements of array

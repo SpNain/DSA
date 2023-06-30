@@ -7,18 +7,33 @@ public class Main {
  
     int n = arr.length;
     
-    for(int itr = 1 ; itr <= n-1 ; itr++){  // [#1] 
-        int minIdx = itr-1;                 // hum start karte hai 0 index se aur
-                                            // usko ek ek karke uske aage bache hue element se check karte jaate hai
-        for(int j = itr ; j < n ; j++){     // isiliye j ki value itr se start hai 
-            if(isSmaller(arr,j,minIdx)){
-                minIdx = j;
-            }
+    for (int itr = 1; itr <= n - 1; itr++) { // [#1] 
+      int minIdx = itr - 1; // hum start karte hai 0 index se aur
+                            // usko ek ek karke uske aage bache hue element se check karte jaate hai
+      for (int j = itr; j < n; j++) { // isiliye j ki value itr se start hai 
+        if (isSmaller(arr, j, minIdx)) {
+          minIdx = j;
         }
-        
-        swap(arr,itr-1,minIdx);
+      }
+
+      swap(arr, itr - 1, minIdx);
     }
     
+    // without isSmaller() & swap() fxn
+    for (int itr = 1; itr <= n - 1; itr++) {
+      
+      int minIdx = itr - 1;
+      
+      for (int j = itr; j < n; j++) {
+        if (arr[j] < arr[minIdx]) {
+          minIdx = j;
+        }
+      }
+      
+      int temp = arr[minIdx];
+      arr[minIdx] = arr[itr-1];
+      arr[itr-1] = temp;
+    }
   }
 
   // used for swapping ith and jth elements of array

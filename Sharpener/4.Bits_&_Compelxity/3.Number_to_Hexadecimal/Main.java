@@ -19,8 +19,8 @@ class Solution {
 
         // // storing remainders in an array for further operations
         // int[] arr = new int[8]; // size 8 because hexadecimal number have atmost 8 bits
-        // int i = 7;  // i = 7 because size is 8 so indexing will be 0 to 7
-
+        // int i = 7;   // i = 7 because size is 8 so indexing will be 0 to 7
+                        // aur kyunki digits last se nikalana start krenge isiliye arr bhi last se fill up krenge
         // while (pNum>0){
 
         //     int rem = pNum%16;
@@ -41,7 +41,7 @@ class Solution {
         //     int carry = 1;
         //     for(int idx = 7; idx>=0; idx--){
 
-        //         if(carry == 0) break; // agr kabhi bhi carry 0 ho gya means ki ab aage numbers ko check krne ki jrurat nhi h wo saare 16 se kam ho honge
+        //         if(carry == 0) break; // agr kabhi bhi carry 0 ho gya means ki ab aage numbers ko check krne ki jrurat nhi h wo saare 16 se kam hi honge
 
         //         arr[idx] += carry;
 
@@ -109,6 +109,7 @@ class Solution {
         // storing remainders in an array for further operations
         int[] arr = new int[8]; // size 8 because hexadecimal number have atmost 8 bits
         int i = 7; // i = 7 because size is 8 so indexing will be 0 to 7
+                        // aur kyunki digits last se nikalana start krenge isiliye arr bhi last se fill up krenge
 
         String ans = "";
 
@@ -164,7 +165,7 @@ class Solution {
         }
 
         // Step 3 : truncating extra 0's
-        // we don't need to truncate 0's in this method because extra 0s sirf tbhi aati h jb num +ve ho aur +ve number pe liye humne pahle se hi answer prepare kr liya h aur -ve numbers me aage extra 0s nhi hote kyunki har ek hexadecimal -ve numbers ki leftmost 1st digit 'f' hoti h (jaise binary me har -ve number ki leftmost 1st digit 1 hoti h)
+        // we don't need to truncate 0's in this method because extra 0s sirf tbhi aati h jb num +ve ho aur +ve number ke liye humne pahle se hi answer prepare kr liya h aur -ve numbers me aage extra 0s nhi hote kyunki har ek -ve hexadecimal numbers ki leftmost 1st digit 'f' hoti h (jaise binary me har -ve binary number ki leftmost 1st digit 1 hoti h)
 
         // Step 4 : preparing answer for -ve num
         if (num < 0) {

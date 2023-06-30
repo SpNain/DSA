@@ -14,20 +14,21 @@ class Solution {
         
         // kyunki arr me sirf 1 to n hi elements h to hum 1 to n tk loop chlake har ek element ke liye check krenge ki wo h ki nhi array me
         for (int i = 1; i <= n; i++) { // here i will represent element in the array
-            int count = 0;
-            for (int j = 0; j < n; j++) { // pure array pe loop maarke check krenge ki kya usme i h agr h to count ko ++ krdo
+            boolean flag = false;      // hum suru me maanke chl rhe h ki array me i element nhi h
+            for (int j = 0; j < n; j++) { // pure array pe loop maarke check krenge ki kya usme i h agr h to flag ko true krdo
                 if (nums[j] == i) {
-                    count++;
+                    flag = true;
                 }
             }
-            if (count == 0) { // agr kisi element ke liye count 0 h means ki wo array me nhi h to use list me add krdo
+            if (!flag) { // agr kisi element ke liye flag false hua to that means ki wo element array me nhi h to use list me add krdo
                 list.add(i);
             }
         }
         */
         /*
         //Sharpener : Vaibhav Solution : Time Complexity : O(n) & Space Complexity : O(n)
-        // yhape hum ek extra array bnate h aur us extra resultant array me given array ki values ka use krke unki shi positions nikalte h aur res array me us pos par us val ko rkhwa dete h
+        // yhape hum ek extra resultant array bnate h
+        // aur given array ki values ka use krke unki shi positions nikalte h aur res array me us pos par us val ko rkhwa dete h
         // jaise ki if nums = {4,3,2,7,8,2,3,1} then res = {1,2,3,4,0,0,7,8}
         // to last me jis index par 0 hoga means ki us index par koi value assign nhi hui means wo values missing h
         // wo values kaise niklegi - kyunki 0 index pe 1 h aur 1 pe 2 to isi hisab se missing value hogi index+1
@@ -49,7 +50,7 @@ class Solution {
         }
         */
         
-        //Sharpener : Vaibhav Solution : Time Complexity : O(n) & Space Complexity : O(1)
+        // Sharpener : Vaibhav Solution : Time Complexity : O(n) & Space Complexity : O(1)
         // humne yhape same rotate array wali approach apnai h
         // bas yha pe hum saare numbers ko unke shi place pe swap krwa rhe h like 1 should be on 0 index, 2 on 1 etc.
         int n = nums.length;
@@ -58,7 +59,9 @@ class Solution {
         int i = 0;
         int val = nums[0];
         
-        // yhape hum count ki bjay i se isiliye loop control kr rhe h kyunki abki baar hume swapping se frk nhi pdta ki kitni ho rhi h balki frk isse pdta h ki kya har ek jgah pe jis element ko hona chahiye tha wo udhar h ki nhi 
+        // yhape hum count ki bjay i se isiliye loop control kr rhe h
+        // kyunki abki baar hume swapping se frk nhi pdta ki kitni ho rhi h
+        // balki frk isse pdta h ki kya har ek jgah pe jis element ko hona chahiye tha wo udhar h ki nhi 
         // to i hum sirf tabhi bdate h jb jis index pe hume value replace krni h whape pahle se shi value pdi ho
         // to iss trike se i sirf tabhi out of index jaayega jb array me jo jo element present h wo saare apni shi jgah pe honge
         while (i < n) {
@@ -72,7 +75,6 @@ class Solution {
             // means ki val yani jo element swap krna h aur temp yani jo element swap hoga dono same hue 
             // to fir us case me hmara rep cyclic replacement occur ho jaayega
             // to iss case me hum i ko increase krte h new val nikalte h
-            // aur count ko ++ krte h kyunki beshak values swap nhi hui but values process to ho hi gyi na
             if (temp == val) {
         
                 i++;
@@ -88,7 +90,7 @@ class Solution {
         }
         
         // agr saare element apni shi position pe aa gye honge 
-        // to jis index pe us index ke hisab se shi element nhi hoga that means ki wo number disappear h aaray se
+        // to jis index pe us index ke hisab se shi element nhi hoga that means ki wo number disappear h array me se
         for(int idx = 0; idx<n; idx++){
             if(nums[idx] != idx+1)
                 list.add(idx+1);

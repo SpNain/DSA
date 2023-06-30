@@ -3,7 +3,7 @@ class Solution {
 
         // Step 0 : Handling Edge Cases
         // Way 1 
-        // // Case 1 : quotient is greater than(first two conditions) or equal to (3rd condition) Integer.MAX_VALUE
+        // // Case 1 : quotient is greater than(in first two conditions) or equal to (in 3rd condition) Integer.MAX_VALUE
         // if (divisor == 0 || (dividend == Integer.MIN_VALUE && divisor == -1) || (dividend == Integer.MAX_VALUE && divisor == 1)) {
         //     return Integer.MAX_VALUE;
         // }
