@@ -17,7 +17,6 @@ class Solution {
         for (int i = 0; i < s.length(); i++) { // we will traverse the string
 
             // agr char 0-9 h aur flag true h to use number me add krdo
-            // aur count ko increase krdo jisse list me add krte time iss baat ka pta lga ske ki num form hua h ki nhi
             if (s.charAt(i) >= '0' && s.charAt(i) <= '9' && flag) {
                 num = num * 10 + ((int) (s.charAt(i)) - 48);
             }
@@ -36,7 +35,6 @@ class Solution {
 
                 // ab hmara formed number to add ho chuka h aur hum else me isiliye aaye h kyunki agla char 0-9 nhi h
                 // to number ko reset yani 0 krdo dobara se 
-                // count ko 0 krdo jisse next number jb form ho tabhi list me addition hoye
                 // aur flag ko false krdo
                 num = 0;
                 flag = false;
@@ -53,17 +51,18 @@ class Solution {
         int num = 0, count = 0;
         
         for (int i = 0; i < s.length(); i++) {
-
+        
             // agr char 0-9 h to use number me add krdo
+            // aur count ko increase krdo jisse list me add krte time iss baat ka pta lga ske ki num form hua h ki nhi
             if (s.charAt(i) >= '0' && s.charAt(i) <= '9') {
                 num = num * 10 + ((int) (s.charAt(i)) - 48);
                 count++;
             }
-
+        
             // agr aage wala char bhi 0-9 h to kuch mat kro
             if (i + 1 < s.length() && s.charAt(i + 1) >= '0' && s.charAt(i + 1) <= '9') {
             }
-
+        
             else {
                 // suru me maine num wali condtion lga rkhi thi ki agr num 0 nhi h to num ko list me add krdo
                 // but agr kahi string ke bich me sirf 0 aa jaaye joki 0-9 to h but hmara number form hone ke baad bhi 0 hi h
@@ -71,7 +70,8 @@ class Solution {
                 // isiliye maine count bnaya ki agr count 0 nhi h to that means num form hua h beshak num 0 hi kyu na bna, ho num list me add hoga
                 if (count != 0)
                     list.add(num);
-
+                
+                // count ko 0 krdo jisse next number jb form ho tabhi list me addition hoye
                 num = 0;
                 count = 0;
             }
@@ -79,24 +79,24 @@ class Solution {
         
         // Approach Stage 3
         // ye bhi same stag 2 ke jaise hi h bas isme num hume string liya h
-
+        
         String num = "";
         int count = 0;
         
         for (int i = 0; i < s.length(); i++) {
-
+        
             if (s.charAt(i) >= '0' && s.charAt(i) <= '9') {
                 num += s.charAt(i);
                 count++;
             }
-
+        
             if (i + 1 < s.length() && s.charAt(i + 1) >= '0' && s.charAt(i + 1) <= '9') {  }
-
+        
             else {
                 // list kyunki integer type h to usse pahle parseInt ka use krke int me convert krlo fir list me add krdo
                 if (count != 0)
                     list.add(Integer.parseInt(num));
-
+        
                 // num ko dobara se empty string assign krdo
                 num = "";
                 count = 0;
