@@ -1,7 +1,7 @@
 class Solution {
     public boolean hasAlternatingBits(int n) {
 
-        /* approach 1
+        /* approach 1 : Sharpener
         while(n>0){
             int prev = n&1;
             int curr = (n>>1)&1;
@@ -14,7 +14,7 @@ class Solution {
         return true;
         */
 
-        // approach 2
+        // approach 2 : Leetcode & YT
         int x = n ^ (n>>1);
         return (x & x+1) == 0;
     }

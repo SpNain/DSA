@@ -1,12 +1,13 @@
 import java.util.*;
 
-// Hume HashMap naam ki class bnayi jisme <K,V> generics use kiya
 public class HashMapCode {
+    
+    // Hume HashMap naam ki class bnayi jisme <K,V> generics use kiya
+    static class HashMap<K, V> {
 
-    // Humne HashMap class ke andar ek aur class bnayi Node naam ki
-    // Iss class me humne key ka type K rkha aur value ka type V
-    // Hmari key aur value constructor ki help se set hongi
-    static class HashMap<K, V> { // generics
+        // Humne HashMap class ke andar ek aur class bnayi Node naam ki
+        // Iss class me humne key ka type K rkha aur value ka type V
+        // Hmari key aur value constructor ki help se set hongi
         private class Node {
             K key;
             V value;
@@ -61,7 +62,7 @@ public class HashMapCode {
         // purana bucket store krwaya
         // new bucket bnaya bde size ka
         // new bucket me linkedlist initialize krwayi
-        // puri bucket pe loop maara
+        // purani bucket pe loop maara
         // aur har ek index pe se ll utahai
         // fir us linkedlist pe loop maara ko  
         // aur ek ek krke node nikali aur put(our fxn) ko call lgadi data bhejke
@@ -124,7 +125,7 @@ public class HashMapCode {
             if (di == -1) { // key doesn't exist
                 return null;
             } else { // key exists
-                Node node = buckets[bi].remove(di);  // remove ans store node
+                Node node = buckets[bi].remove(di);  // remove & store node
                 n--;                                 // decrease size kyunki node minus hui h
                 return node.value;                   // stored node ka use krke us node ki value ko return krdo
             }

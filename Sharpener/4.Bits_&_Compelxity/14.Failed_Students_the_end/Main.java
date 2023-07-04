@@ -6,6 +6,7 @@ import java.util.*;
 class Solution {
     public int[] arrange(int[] arr) {
         
+        // Method 1 :
         int n = arr.length;
         
         // nyi arraylist bnai
@@ -39,6 +40,39 @@ class Solution {
         
         // res ko return kr diya
         return res;
+
+        /*
+        // Method 2 :
+        int n = arr.length;
+        
+        // nya res array bnaya
+        int[] res = new int[n];
+        
+        int lo = 0, hi = n-1; // res aaray ko fill up krne ke liye
+        int i = 0, j = n-1; // original array ko traverse krne ke liye
+        
+        while(lo<=hi){
+          if(arr[i] >=0){
+            res[lo] = arr[i];
+            i++;
+            lo++;
+          }
+          else{
+            i++;
+          }
+          
+          if(arr[j] < 0){
+            res[hi] = arr[j];
+            j--;
+            hi--;
+          }else{
+            j--;
+          }
+        }
+        
+        // res ko return kr diya
+        return res;
+        */
     }
 }
 

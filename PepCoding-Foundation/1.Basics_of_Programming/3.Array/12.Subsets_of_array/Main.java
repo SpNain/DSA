@@ -27,23 +27,41 @@ public class Main{
             printSeq(arr,bNum);
         }
     }
-    public static void printSeq(int arr[],int bNum){
+
+    public static void printSeq(int arr[], int bNum) {
+        // Method 1;
         int n = arr.length;
-        int idx = n-1;
-        String str = "";                       //String str = "";
-        while(n != 0){                         //for(int idx = arr.length-1; idx>=0; idx--)
-            int rem = bNum%10;                 //  {
-            bNum = bNum / 10;                  //      int rem = bNum%10;
-            if(rem == 0){                      //      bNum = bNum / 10;
-                str = "-\t"+str;               //      if(rem == 0){
-            }else{                             //          str = "-\t"+str;
-                str = arr[idx]+"\t"+str;       //      }
-            }                                  //      else{ 
-            idx--;                             //          str = arr[idx]+"\t"+str;
-            n--;                               //      }
-        }                                      //  }
-        System.out.println(str);               //System.out.println(str);
+        int idx = n - 1;
+        String str = "";
+        while (n != 0) {
+            int rem = bNum % 10;
+            bNum = bNum / 10;
+            if (rem == 0) {
+                str = "-\t" + str;
+            } else {
+                str = arr[idx] + "\t" + str;
+            }
+            idx--;
+            n--;
+        }
+        System.out.println(str);
+
+        // Method 2
+        //String str = "";
+        //for(int idx = arr.length-1; idx>=0; idx--)
+        //  {
+        //      int rem = bNum%10;
+        //      bNum = bNum / 10;
+        //      if(rem == 0){
+        //          str = "-\t"+str;
+        //      }
+        //      else{
+        //          str = arr[idx]+"\t"+str;
+        //      }
+        //  }
+        //System.out.println(str);
     }
+
     public static int getBinary(int n){
         int rv = 0;
         int pow = 1;

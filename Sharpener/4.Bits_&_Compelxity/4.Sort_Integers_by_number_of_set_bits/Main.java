@@ -1,10 +1,4 @@
-import java.util.*;
-
-
-//========== User's Code Starts Here ==========
-
 class Solution {
-    
     public static int countSetBit(int n) {
 
         int count = 0;
@@ -60,30 +54,5 @@ class Solution {
         }
         
         return arr;
-    }
-}
-
-//========== User's Code Ends Here ==========
-
-
-
-public class Main
-{
-   
-    
-     public static void main(String[]args)
-    {
-        Scanner sc=new Scanner(System.in);
-        int n =sc.nextInt();
-        Solution s = new Solution();
-        int arr[]=new int[n];
-        for(int i=0;i<n;i++)
-        {
-            arr[i]=sc.nextInt();
-        }
-        int[] output = s.sortByBits(arr);
-        for(int i=0;i<n;i++)
-            System.out.print(output[i]+" ");
-        System.out.println();
     }
 }
