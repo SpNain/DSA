@@ -13,9 +13,10 @@ public class Main {
                 int val = 1;  //it is iC0
                 for(int j = 0; j<= i; j++)
                 {
-                    System.out.print(val+"\t");
+                    System.out.print(val + "\t");
+                    
                     // Calcultion of iC(j+1) using iCj
-                    val = val* (i-j)/(j+1);  //B/c nCr+1=nCr*(n-r)/(r+1) [#1]
+                    val = val* (i-j)/(j+1);  // b/c nCr+1=nCr*(n-r)/(r+1) [#1]
                 }
                 System.out.println();
             }

@@ -10,14 +10,26 @@ public class Main {
         int gcd = 0;
         int divisior = n1;
         int dividend = n2;
+
+        // Method 1
         int remainder = 1;
-        while (remainder != 0) //if  argu = dividend%divisior!=0
+        while (remainder != 0)
         {
-            remainder = dividend % divisior; //then gcd=divisior
-            dividend = divisior; //b/c in that case condition check first and fail
-            divisior = remainder; //thats why last iteration not hapened.
+            remainder = dividend % divisior;
+            dividend = divisior;
+            divisior = remainder;
         }
         gcd = dividend;
+
+        // Method 2
+        // while(dividend%divisior!=0)
+        // {
+        //     int remainder = dividend % divisior;
+        //     dividend = divisior;
+        //     divisior = remainder;
+        // }
+        // gcd = divisior; // b/c in this case condition check first and fail thats why last iteration not hapened.
+
         int lcm = (n1 * n2) / gcd;
         System.out.println(gcd);
         System.out.println(lcm);
