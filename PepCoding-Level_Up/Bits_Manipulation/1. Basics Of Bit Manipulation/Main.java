@@ -7,7 +7,7 @@ public class Main {
     public static void basicBit(int n, int i, int j, int k, int m) {
 
         // 1. on ith bit
-        int bm1 = (1 << 1);
+        int bm1 = (1 << i);
         System.out.println(n | bm1);
 
         // 2. off jth bit
