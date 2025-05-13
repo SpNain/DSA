@@ -20,7 +20,7 @@ class Solution {
         // In the Way 1 we are handling edge cases which are not required but we are handling them so that we don't need to do some extra work for some special cases
         // In the given question we have to handle edge cases for only when quotient is greater than max value or less than min value
         // so if we reduce our handling edge cases to only provided ones then above code will reduce to below code
-        // so we have trucated the cases when quotient is equal to max or min value and divisor is 1 or -1 because for these cases our code will work fine
+        // so we have truncated the cases when quotient is equal to max or min value and divisor is 1 or -1 because for these cases our code will work fine
         if (divisor == 0 || (dividend == Integer.MIN_VALUE && divisor == -1)) {
             return Integer.MAX_VALUE;
         }
@@ -59,7 +59,7 @@ class Solution {
             // This represents the number of bits shifted or how many times we can double the number
             int shift = 0;
 
-            // agr hum divisor ko long me convert nhi krte the hume idhar (absDivisor<<shift)>0 condition aur lgani pdti due to cyclic behaviour of numer system
+            // agr hum divisor ko long me convert nhi krte the hume idhar (absDivisor<<shift)>0 condition aur lgani pdti due to cyclic behavior of number system
             while (absDividend >= (absDivisor << shift)) {
                 shift++;
             }

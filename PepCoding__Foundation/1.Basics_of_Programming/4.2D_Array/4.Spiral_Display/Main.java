@@ -20,7 +20,7 @@ public class Main {
     }
 
     public static void spiralDisplay(int mat[][]){
-        int rmin = 0, cmin = 0, rmax = mat.length-1,cmax = mat[0].length-1;
+        int rmin = 0, cmin = 0, rmax = mat.length-1, cmax = mat[0].length-1;
         int count = 0 ;
         int totalEle = mat.length * mat[0].length;
         while(count < totalEle){

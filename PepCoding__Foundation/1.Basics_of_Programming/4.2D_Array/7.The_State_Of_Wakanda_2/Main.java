@@ -16,10 +16,10 @@ public class Main {
             }
         }
 
-        // logic                                                               or   int i =0;
-        for (int gap = 0; gap < n; gap++) {                                    //   for(int c=0; c<n; c++){
-            for (int r = 0, c = gap; r < n && c < n; r++, c++) {               //       for(int r=0; r<n-i; r++,i++){
-                System.out.println(mat[r][c]);                                 //          sout(mat[r][c]);}
+        // logic
+        for (int gap = 0; gap < n; gap++) {
+            for (int r = 0, c = gap; r < n && c < n; r++, c++) {
+                System.out.println(mat[r][c]);
             }
         }
     }
@@ -38,7 +38,7 @@ Logic behind logic :
 
     public static void sow(int[][] arr){
         for(int d = 0; d<arr.length; d++){
-            for(int i = 0, j = i+d; i<arr.length && j<arr[0].length; i++,j++){
+            for(int i = 0, j = i+d; i<arr.length && j<arr[0].length; i++){
                 System.out.println(arr[i][j]);
             }
         }

@@ -39,4 +39,4 @@ public class Main {
 
 }
 
-// Palidromin = jo front aur end dono side se read krne pe same ho e.g. - naman.
+// Palidromic = jo front aur end dono side se read krne pe same ho e.g. - naman.
